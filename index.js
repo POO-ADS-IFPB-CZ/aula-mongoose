@@ -5,3 +5,18 @@ import mongoose from 'mongoose';
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Conectado no MongoDB'))
     .catch(err => console.log(err));
+
+const UsuarioSchema = mongoose.Schema({
+    nome:String,
+    email:{
+        type:String,
+        required:true,
+        unique:true
+    }
+});
+const Usuario = mongoose.model('Usuario', UsuarioSchema);
+
+Usuario.insertOne({nome:"José", 
+    email:"jose@gmail.com"})
+    .then(()=> console.log('Salvo com sucesso'))
+    .catch(err => console.log(err));
