@@ -16,7 +16,13 @@ const UsuarioSchema = mongoose.Schema({
 });
 const Usuario = mongoose.model('Usuario', UsuarioSchema);
 
-Usuario.insertOne({nome:"José", 
-    email:"jose@gmail.com"})
-    .then(()=> console.log('Salvo com sucesso'))
+const jose = await Usuario.findOne({email:"jose@gmail.com"});
+jose.nome="José da Silva";
+jose.save()
+    .then(()=>console.log('Atualizado com sucesso'))
     .catch(err => console.log(err));
+
+// Usuario.insertOne({nome:"José", 
+//     email:"jose@gmail.com"})
+//     .then(()=> console.log('Salvo com sucesso'))
+//     .catch(err => console.log(err));
