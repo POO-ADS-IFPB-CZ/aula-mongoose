@@ -1,0 +1,25 @@
+{
+  "name": "aula-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/POO-ADS-IFPB-CZ/aula-mongoose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/POO-ADS-IFPB-CZ/aula-mongoose/issues"
+  },
+  "homepage": "https://github.com/POO-ADS-IFPB-CZ/aula-mongoose#readme",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "mongoose": "^9.11.2"
+  }
+}
